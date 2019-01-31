@@ -1,0 +1,25 @@
+{
+  "name": "tmreaderbot",
+  "version": "1.0.0",
+  "description": "A Techmeme reader bot for Telegram",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlribeiro/techmemereaderbot.git"
+  },
+  "author": "Vinicius Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlribeiro/techmemereaderbot/issues"
+  },
+  "homepage": "https://github.com/vlribeiro/techmemereaderbot#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "rss-watcher": "^1.4.0",
+    "telegram-bot-api": "^1.3.1"
+  }
+}
