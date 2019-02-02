@@ -1,34 +1,11 @@
-const telegram = require('telegram-bot-api');
-const Watcher = require(`rss-watcher`);
 require('dotenv').config();
+const rss = require(`./src/rss.js`);
+const telegram = require(`./src/telegram.js`);
+const feeds = require(`./data/feed_list.json`);
 
-const channel = `@techmeme`;
-const feed = `https://www.techmeme.com/feed.xml`;
-// const feed = `http://lorem-rss.herokuapp.com/feed?unit=second&interval=5`;
+const onArticle = (feed, article) => {
+    telegram.send(`From *${feed.provider_name}*\n\n${article.title}\n\n[Read full story](${article.link}`);
+}
 
-const api = new telegram({
-    token: process.env.BOT_TOKEN,
-    updates: {
-        enabled: true
-    }
-});
-
-
-const watcher = new Watcher(feed);
-watcher.set({
-    interval: 5,
-    feed: feed
-})
-
-watcher
-    .on(`new article`, (entries) => {
-        console.log(entries);
-        api.sendMessage({
-            chat_id: channel,
-            text: `${entries.title}: ${entries.link}`
-        });
-});
-
-watcher.run();
-
-console.log(`esperando...`);
+telegram.init(process.env.BOT_TOKEN);
+rss.init(feeds, onArticle);

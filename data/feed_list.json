@@ -1,0 +1,24 @@
+[
+    {
+        "provider_name": "The Verge",
+        "feed_url": "https://www.theverge.com/rss/index.xml"
+    }, {
+        "provider_name": "Techmeme",
+        "feed_url": "https://www.techmeme.com/feed.xml"
+    }, {
+        "provider_name": "Wired - Top Stories",
+        "feed_url": "https://www.wired.com/feed/rss"
+    }, {
+        "provider_name": "Wired - Business",
+        "feed_url": "https://www.wired.com/feed/category/business/latest/rss"
+    }, {
+        "provider_name": "Wired - Ideas",
+        "feed_url": "https://www.wired.com/feed/category/ideas/latest/rss"
+    }, {
+        "provider_name": "Wired - Backchannel",
+        "feed_url": "https://www.wired.com/feed/category/backchannel/latest/rss"
+    }, {
+        "provider_name": "Vox - Technology",
+        "feed_url": "http://www.vox.com/rss/technology/index.xml"
+    }
+]
